@@ -1,0 +1,33 @@
+
+.icon-picker{
+    height: 60vh;
+    overflow-y: scroll;
+    width: 100%;
+    .icon-selection{
+        text-align: center;
+        max-width: 120px;
+        width: 80px;
+        height: 80px;
+        .icon-wrapper{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .text-wrapper{
+            flex-grow: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        svg{
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .icon-text{
+        font-size: 0.65rem;
+    }
+}
+

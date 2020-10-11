@@ -1,0 +1,7 @@
+header{
+    .custom-logo-link{
+        img{
+            max-height: 70px;
+        }
+    }
+}

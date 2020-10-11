@@ -1,0 +1,46 @@
+
+@import "inc/_icon-picker.css";
+
+.display-none{
+    display: none;
+}
+
+.max-w-prose {
+    max-width: 65ch;
+}
+
+.nav-menus-php{
+    .dx-popup-content{
+        background-color: #F1F1F1;
+    }
+
+    .menu-item-settings{
+        div[data-name=source]{
+            visibility: hidden;
+           height: 0;
+        }
+    }
+
+    .icon-select-row{
+        //display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .icon{
+            svg{
+                width: 60px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    #post-body-content{
+        display: flex;
+        flex-direction: column;
+        .acf-menu-settings{
+            order: -1;
+            margin-top: 0;
+            border-top: 0;
+        }
+    }
+
+}

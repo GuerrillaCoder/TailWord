@@ -1,0 +1,5 @@
+.comment-reply-link, .comment-edit-link{
+    @apply text-indigo-500 inline-flex items-center mt-4
+}
+
+
