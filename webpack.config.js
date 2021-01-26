@@ -3,6 +3,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const IgnoreEmitPlugin  = require('ignore-emit-webpack-plugin');
 
+//example config: https://gist.github.com/adamwathan/7796ee4dced569cc31d5cf83c62b8f89
+//todo: turn postcss config into object so can have 2 separate configs, one for frontend purge and one for backend purge
+
 module.exports = [
     {
         entry: {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Popup } from 'devextreme-react/popup';
+import { Popup } from 'devextreme-react/ui/popup';
 import * as overlay from 'devextreme/ui/overlay';
 import { IconPicker } from "./icon-picker";
 
