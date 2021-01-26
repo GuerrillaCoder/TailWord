@@ -10,19 +10,19 @@ const application = Application.start();
 const context = require.context("./controllers", true, /\.ts$/);
 application.load(definitionsFromContext(context));
 
-var root = document.getElementById("root");
-
-if (root) {
-    ReactDOM.render(<Hello />, root);
-}
-
-function Hello() {
-    return (
-        <div>
-        <h1>Hello, world! </h1> <UpdateButton />
-        </div>
-    );
-}
+// var root = document.getElementById("root");
+//
+// if (root) {
+//     ReactDOM.render(<Hello />, root);
+// }
+//
+// function Hello() {
+//     return (
+//         <div>
+//         <h1>Hello, world! </h1> <UpdateButton />
+//         </div>
+//     );
+// }
 
 function UpdateButton() {
 

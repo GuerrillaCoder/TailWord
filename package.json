@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production --config webpack.config.js",
+    "build": "cross-env NODE_ENV=development webpack --mode=development --config webpack.config.js",
+    "build-watch": "cross-env NODE_ENV=development webpack -w --mode=development --config webpack.config.js",
     "prod": "cross-env NODE_ENV=production webpack --mode production",
     "webpack-dev": "webpack --mode=development --config webpack.config.js --watch",
     "browser-sync": "node bs.js",

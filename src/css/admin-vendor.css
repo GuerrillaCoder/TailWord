@@ -1,7 +1,4 @@
 
-@import 'devextreme/dist/css/dx.common';
-@import 'devextreme/dist/css/dx.light';
-
 //todo: make this file use purge-css
 .tailwind{
     @import "inc/_tailwind.css";

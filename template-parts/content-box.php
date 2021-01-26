@@ -16,7 +16,7 @@
                         "class" => "object-cover h-48 w-full"
                     ));
                 } else {
-                    echo '<img src="' . get_stylesheet_directory_uri() . '/img/unsplash/' . rand(1, 42) . '.jpg" class="object-cover h-48 w-full" />';
+                    echo '<img src="' . get_theme_file_uri('/img/unsplash/')  . rand(1, 42) . '.jpg" class="object-cover h-48 w-full" />';
                 }
                 ?>
             </div>

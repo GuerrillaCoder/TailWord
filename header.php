@@ -60,15 +60,20 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                 <div class="lg:w-0 lg:flex-1 logo">
-                    <a href="#" class="flex max-h-8">
+                    <a href="<?php get_home_url(); ?>" class="flex max-h-8">
                         <?php
                         if (function_exists('the_custom_logo')) {
 
                             if (has_custom_logo()) {
-                                the_custom_logo();
+//                                the_custom_logo();
+                                $logo = get_theme_mod( 'custom_logo' );
+                                $image = wp_get_attachment_image_src( $logo , 'full' );
+                                echo '<img class="max-w-300"
+                             src="'.$image[0].'" alt="Workflow">';
+
                             } else {
                                 echo '<img class="h-8 w-auto sm:h-10"
-                             src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Workflow">';
+                             src="https://tailwindui.com/img/logos/v1/workflow-mark-on-white.svg" alt="Workflow">';
                             }
                         }
 
