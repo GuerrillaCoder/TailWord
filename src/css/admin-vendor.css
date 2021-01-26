@@ -1,7 +1,5 @@
 
-//todo: make this file use purge-css
+
 .tailwind{
     @import "inc/_tailwind.css";
 }
-
-
