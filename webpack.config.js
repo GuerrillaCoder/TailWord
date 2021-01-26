@@ -28,49 +28,6 @@ module.exports = [
             path: path.resolve(__dirname, 'dist'),
         }
     },
-    // {
-    //     entry: {
-    //         'tailwind': './src/css/tailwind.css',
-    //     },
-    //     output: {
-    //         filename: '_tailwind.js',
-    //         path: path.resolve(__dirname, 'src/css/inc/'),
-    //     },
-    //     mode: 'development',
-    //     plugins: [
-    //         new MiniCssExtractPlugin({
-    //             filename: '_tailwind.css',
-    //             // chunkFilename: '[name].css',
-    //         }),
-    //         new IgnoreEmitPlugin(
-    //             ['_tailwind.js']
-    //         )
-    //     ],
-    //     module: {
-    //
-    //         rules: [
-    //             {
-    //                 test: /\.css$/,
-    //                 exclude: /node_modules/,
-    //                 use: [
-    //                     {
-    //                         loader: MiniCssExtractPlugin.loader,
-    //                     },
-    //                     {
-    //                         loader: 'css-loader',
-    //                         options: {
-    //                             importLoaders: 1,
-    //                         }
-    //                     },
-    //                     {
-    //                         loader: 'postcss-loader'
-    //                     }
-    //                 ],
-    //             }
-    //         ],
-    //     },
-    // },
-
     {
         entry: {
             'vendor': './src/css/vendor.css',

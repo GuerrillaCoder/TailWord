@@ -25,6 +25,7 @@ class Tailwindcss_ThemeNav
 
     function addIconButton($item_id, $item, $depth, $args, $id)
     {
+        //BUG: This only works if menu manually selected.  If editing default menu then no icons buttons are shown.
         $icon_cats = array("header-menu");
         $show = false;
 

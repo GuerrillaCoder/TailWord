@@ -1,5 +1,3 @@
+@tailwind components;
 
-
-.tailwind{
-    @import "inc/_tailwind.css";
-}
+@tailwind utilities;
