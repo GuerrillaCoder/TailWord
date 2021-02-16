@@ -34,7 +34,6 @@ module.exports = [
     {
         entry: {
             'vendor': './src/css/vendor.css',
-            'admin-vendor': './src/css/admin-vendor.css',
             'admin': './src/css/admin.css',
             'main': './src/css/main.css',
         },
@@ -50,7 +49,7 @@ module.exports = [
                     { from: 'node_modules/devextreme/dist/css/icons', to: 'icons' },
                 ]}),
             new IgnoreEmitPlugin(
-                ['vendor.js', 'admin-vendor.js', 'admin.js', 'main.js']
+                ['vendor.js', 'admin.js', 'main.js']
             )
         ],
         module: {
@@ -62,12 +61,6 @@ module.exports = [
                     use: [
                         {
                             loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                // // only enable hot in development
-                                hmr: process.env.NODE_ENV === 'development',
-                                // // if hmr does not work, this is a forceful method.
-                                // reloadAll: true,
-                            }
                         },
                         {
                             loader: 'css-loader',
@@ -76,7 +69,82 @@ module.exports = [
                             }
                         },
                         {
-                            loader: 'postcss-loader'
+                            loader: 'postcss-loader',
+                            options: {
+                                postcssOptions: {
+                                    plugins: {
+                                        precss: {},
+                                        tailwindcss: { config: `${__dirname}/tailwind.front.config.js` },
+                                        autoprefixer: {},
+                                    }
+                                }
+
+                            },
+                        }
+                    ],
+                },
+                {
+                    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: '[name].[ext]',
+                                outputPath: 'fonts/'
+                            }
+                        }
+                    ]
+                }
+            ],
+        },
+        output: {
+            filename: '[name].js',
+            path: path.resolve(__dirname, 'dist'),
+        },
+    },
+    {
+        entry: {
+            'admin-vendor': './src/css/admin-vendor.css',
+        },
+        mode: 'development',
+        devtool: 'inline-source-map',
+        plugins: [
+            new MiniCssExtractPlugin({
+                filename: '[name].css',
+                // chunkFilename: '[name].css',
+            }),
+            new IgnoreEmitPlugin(
+                ['admin-vendor.js']
+            )
+        ],
+        module: {
+
+            rules: [
+                {
+                    test: /\.css$/,
+                    // exclude: /node_modules/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                        },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                postcssOptions: {
+                                    plugins: {
+                                        precss: {},
+                                        tailwindcss: { config: `${__dirname}/tailwind.admin.config.js` },
+                                        autoprefixer: {},
+                                    }
+                                }
+
+                            },
                         }
                     ],
                 },

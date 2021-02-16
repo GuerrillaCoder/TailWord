@@ -125,8 +125,8 @@ export const IconPicker: React.FunctionComponent<IconPickerProps> = (props) => {
     }
 
     return (
-        <div className="min-h-full tailwind">
-            <div className="p-4">
+        <div className="tw-min-h-full tailwind">
+            <div className="tw-p-4">
                 <TextBox onInput={updateGrid} placeholder="Search icons..."/>
             </div>
 
@@ -136,8 +136,8 @@ export const IconPicker: React.FunctionComponent<IconPickerProps> = (props) => {
                         iconOption => (
                             <div key={iconOption.source + '-' + iconOption.name}
                                  onClick={() => setIconValue(iconOption)}
-                                 className="icon-selection inline-block rounded overflow-hidden shadow-lg bg-white m-1 hover:bg-blue-100 cursor-pointer">
-                                <div className="icon-wrapper px-2 py-2 text-center">
+                                 className="icon-selection tw-inline-block tw-rounded tw-overflow-hidden tw-shadow-lg tw-bg-white tw-m-1 hover:tw-bg-blue-100 tw-cursor-pointer">
+                                <div className="icon-wrapper tw-px-2 tw-py-2 tw-text-center">
 
 
                                     <iconOption.Component {...props.svgProps} />
@@ -146,7 +146,7 @@ export const IconPicker: React.FunctionComponent<IconPickerProps> = (props) => {
                                         <div className="icon-text">{getHighlightedText(iconOption.name, searchTerm)}</div> */}
                                         <Highlighter
                                             className="icon-text"
-                                            highlightClassName="bg-yellow-200"
+                                            highlightClassName="tw-bg-yellow-200"
                                             searchWords={[searchTerm]}
                                             autoEscape={true}
                                             textToHighlight={iconOption.name}
