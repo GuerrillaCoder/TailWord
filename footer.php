@@ -64,7 +64,7 @@ if(isset($menu_locations["footer-menu-4"]))
             </div>
         <div class="mt-12 border-t border-gray-200 pt-8">
             <p class="text-base leading-6 text-gray-400 xl:text-center">
-                &copy; 2020 Turma, LLC. All rights reserved.
+                &copy; 2021 Turma, LLC. All rights reserved.
             </p>
         </div>
     </div>
